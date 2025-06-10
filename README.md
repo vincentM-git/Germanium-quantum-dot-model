@@ -1,2 +1,2 @@
 # Germanium-quantum-dot-model
-Luttinger-Kohn model of electrostatically gate-defined quantum dot in Germanium heterostructure
+Luttinger-Kohn model of gate defined quantum dots in Germanium heterostructure.
