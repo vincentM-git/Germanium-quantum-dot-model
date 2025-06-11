@@ -15,6 +15,10 @@ a0 = 1e9*physical_constants["Bohr radius"][0]
 
 EH = 1e3*physical_constants["Hartree energy in eV"][0]
 
+# parameter in k.p Hamiltonian
+
+mu = 0.5 * EH * a0**2
+
 # Bohr magneton in meV/T
 
 muB = 1e3*physical_constants["Bohr magneton in eV/T"][0]
@@ -23,11 +27,7 @@ muB = 1e3*physical_constants["Bohr magneton in eV/T"][0]
 
 phi0 = 2e18*physical_constants["mag. flux quantum"][0]
 
-# parameter in k.p Hamiltonian
-
-mu = 0.5 * EH * a0**2
-
-consts = { "mu": mu, "muB": muB, "phi0": phi0}
+consts = {"a0": a0, "EH": EH, "mu": mu, "muB": muB, "phi0": phi0}
 
 # Spin-3/2 matrices definition
 
