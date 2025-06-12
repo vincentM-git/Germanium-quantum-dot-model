@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Modules')))
+
 from LK_utils import H_LKBP, get_material_parameters
 from quantum_dots_LKBP import make_model_LKBP, eigs_double_dot_potential, D_dip, visualize_total_wavefunction_xy
 import time

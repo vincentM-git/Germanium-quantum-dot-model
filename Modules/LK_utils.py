@@ -1,7 +1,7 @@
 import numpy as np
-from scipy.constants import physical_constants
 from numpy import matmul
 from scipy.constants import physical_constants
+import os
 import json
 
 # Get physical constants (all lengths in nm, energies in meV and magnetic field in T)
@@ -81,7 +81,8 @@ H_LKBP = ("""
     """)
 
 def get_material_parameters(mat):
-    with open('semiconductor_material_parameters.json', 'r') as file:
+    json_path = os.path.join(os.path.dirname(__file__), 'semiconductor_material_parameters.json')
+    with open(json_path, 'r') as file:
         parameters = json.load(file)
     for mat_params in parameters:
         if mat_params["Material"] == mat:
