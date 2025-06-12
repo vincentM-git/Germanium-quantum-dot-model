@@ -81,8 +81,7 @@ H_LKBP = ("""
     """)
 
 def get_material_parameters(mat):
-    json_path = os.path.join(os.path.dirname(__file__), 'semiconductor_material_parameters.json')
-    with open(json_path, 'r') as file:
+    with open(os.path.join(os.path.dirname(__file__), 'semiconductor_material_parameters.json'), 'r') as file:
         parameters = json.load(file)
     for mat_params in parameters:
         if mat_params["Material"] == mat:
